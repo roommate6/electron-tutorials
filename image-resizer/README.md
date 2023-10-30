@@ -5,9 +5,11 @@
 ```powershell
 npm install electron resize-img toastify-js
 ni "main.js"
+npx electronmon .
 ```
 
 ni = New-Item
+npx electronmon . - runs the app with live update
 
 ## package.json
 
