@@ -9,6 +9,7 @@ npx electronmon .
 ```
 
 ni = New-Item
+
 npx electronmon . - runs the app with live update
 
 ## package.json
