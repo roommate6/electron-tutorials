@@ -7,7 +7,7 @@ const isMac = process.platform === "darwin";
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
     title: "Image Resizer",
-    width: 500,
+    width: isDevelopment ? 1000 : 500,
     height: 600,
   });
 
