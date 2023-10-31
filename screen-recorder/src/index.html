@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Screen recorder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="renderer.js"></script>
+  </head>
+  <body class="content">
+    <h1>🎬 Screen recorder</h1>
+
+    <video></video>
+
+    <button id="startButton" class="button is-primary">Start</button>
+    <button id="stopButton" class="button is-warning">Stop</button>
+
+    <hr />
+
+    <button id="videoSourceButton" class="button is-text">
+      Video source...
+    </button>
+  </body>
+</html>
