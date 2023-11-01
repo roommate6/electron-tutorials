@@ -1,5 +1,6 @@
 const { ipcRenderer } = require("electron");
 const ipc = ipcRenderer;
+var isLeftMenuActive = false;
 
 const closeButton = document.getElementById("close-button");
 
@@ -36,4 +37,17 @@ const minimizeButton = document.getElementById("minimize-button");
 
 minimizeButton.addEventListener("click", () => {
   ipc.send("top-button:minimize");
+});
+
+const toggleButton = document.getElementById("toggle-button");
+const leftMenu = document.getElementById("left-menu");
+
+toggleButton.addEventListener("click", () => {
+  if (isLeftMenuActive) {
+    leftMenu.style.width = "0px";
+    isLeftMenuActive = false;
+    return;
+  }
+  leftMenu.style.width = "280px";
+  isLeftMenuActive = true;
 });
