@@ -1,0 +1,14 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "```powershell",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ștefan-Sebastian Neicu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.2"
+  }
+}
