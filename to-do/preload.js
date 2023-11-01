@@ -1,5 +1,5 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
 contextBridge.exposeInMainWorld("api", {
-  title: "Title from api",
+  createNode: (data) => ipcRenderer.invoke("create-file", data),
 });
