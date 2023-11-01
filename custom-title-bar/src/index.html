@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom title bar</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="js/index.js"></script>
   </head>
   <body>
-    <h1>Header placeholder</h1>
-    <p>
-      We are using Node.js <span id="node-version"></span> Chromium
-      <span id="chrome-version"></span> and Electron
-      <span id="electron-version"></span>.
-    </p>
+    <div class="main-container">
+      <div class="title-bar-container">
+        <div class="left-part-container">
+          <button id="toggle-button" class="toggle-button"></button>
+          <img src="icons/icon_top_bar.png" alt="" />
+          <div class="title">Custom title bar</div>
+        </div>
+        <div class="right-part-container">
+          <button
+            id="minimize-button"
+            class="top-button minimize-button"
+          ></button>
+          <button
+            id="maximize-button"
+            class="top-button maximize-button"
+          ></button>
+          <button id="close-button" class="top-button close-button"></button>
+        </div>
+      </div>
+      <div class="content-container">
+        <div id="testid-menu" class="left-menu"></div>
+        <div class="content-page">
+          <img
+            class="color-palette"
+            src="images/color-palette.png"
+            width="500"
+          />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
