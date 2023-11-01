@@ -1,2 +1,5 @@
 # Dependency directory
 node_modules/
+
+# Build file
+todoapp-win32-x64/
