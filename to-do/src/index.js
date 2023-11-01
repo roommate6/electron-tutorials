@@ -1,1 +1,2 @@
-console.log("Inside index.js");
+const titleElement = document.getElementById("title");
+titleElement.innerText = api.title;
