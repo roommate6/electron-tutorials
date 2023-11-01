@@ -18,6 +18,7 @@ html, body {
     overflow: hidden;
     border: 1px solid #0B090A;
     -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .main-container > .title-bar-container {
@@ -28,6 +29,7 @@ html, body {
     border-bottom: 3px solid #F5F3F4;
     background-color: #0B090A;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 .title-bar-container > .left-part-container {
@@ -91,6 +93,9 @@ html, body {
 }
 .right-part-container > .minimize-button {
     background-image: url(../icons/icon_minimize.png);
+}
+.right-part-container > .restore-button {
+    background-image: url(../icons/icon_restore.png);
 }
 .right-part-container > .maximize-button {
     background-image: url(../icons/icon_maximize.png);
