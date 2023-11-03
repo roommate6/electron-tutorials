@@ -1,6 +1,10 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const ipc = ipcMain;
+const { applyColorOverlay } = require("./scripts/applyColorOverlay");
+const { deleteFilesInDirectory } = require("./scripts/deleteFilesInDirectory");
+const { copyFiles } = require("./scripts/copyFiles");
+const { getSingletonInstance } = require("./state_trackers/guiState");
 
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
@@ -42,7 +46,18 @@ function createMainWindow() {
   mainWindow.loadFile(path.join(__dirname, "src/index.html"));
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+  const iconsPath = path.join(__dirname, "src", "icons");
+  const iconsTemporaryPath = path.join(__dirname, "src", "icons_temporary");
+  deleteFilesInDirectory(iconsTemporaryPath);
+  await applyColorOverlay(
+    iconsPath,
+    iconsTemporaryPath,
+    getSingletonInstance().palette.text.hexaValue
+  );
+  deleteFilesInDirectory(iconsPath);
+  copyFiles(iconsTemporaryPath, iconsPath);
+
   createMainWindow();
 
   app.on("activate", () => {

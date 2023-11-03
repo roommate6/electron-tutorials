@@ -12,3 +12,7 @@ class Color {
     this.#HexaValue = hexaValue;
   }
 }
+
+module.exports = {
+  Color,
+};

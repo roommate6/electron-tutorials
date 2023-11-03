@@ -1,8 +1,11 @@
+const { Color } = require("../classes/color");
+
 class Palette {
   #topBar;
   #subMenu;
   #background;
-  #border;
+  #mainBorder;
+  #secondBorder;
   #mouseHover;
   #mousePress;
   #text;
@@ -11,7 +14,8 @@ class Palette {
     topBar,
     subMenu,
     background,
-    border,
+    mainBorder,
+    secondBorder,
     mouseHover,
     mousePress,
     text
@@ -19,7 +23,8 @@ class Palette {
     this.#topBar = topBar;
     this.#subMenu = subMenu;
     this.#background = background;
-    this.#border = border;
+    this.#mainBorder = mainBorder;
+    this.#secondBorder = secondBorder;
     this.#mouseHover = mouseHover;
     this.#mousePress = mousePress;
     this.#text = text;
@@ -46,11 +51,18 @@ class Palette {
     this.#background = background;
   }
 
-  get border() {
-    return this.#border;
+  get mainBorder() {
+    return this.#mainBorder;
   }
-  set border(border) {
-    this.#border = border;
+  set mainBorder(mainBorder) {
+    this.#mainBorder = mainBorder;
+  }
+
+  get secondBorder() {
+    return this.#secondBorder;
+  }
+  set secondBorder(secondBorder) {
+    this.#secondBorder = secondBorder;
   }
 
   get mouseHover() {
@@ -74,3 +86,8 @@ class Palette {
     this.#text = text;
   }
 }
+
+module.exports = {
+  Color,
+  Palette,
+};
